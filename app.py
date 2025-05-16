@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -37,7 +37,6 @@ def fortune():
     return render_template('fortune_form.html')
 
 
-=======
 from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
@@ -110,6 +109,6 @@ def song_detail(id):
 
 
 # Run the app
->>>>>>> 94c7871 (Add untracked files)
+
 if __name__ == '__main__':
     app.run(debug=True)
