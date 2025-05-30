@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Song List</title>
+  </head>
+  <body>
+    <h1>Song List</h1>
+    <ul>
+      {% for song in songs %}
+      <li>
+        <a href="{{ url_for('song_detail', id=song.id) }}">
+          {{ song.title }} by {{ song.artist }} ({{ song.year }})
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

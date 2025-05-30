@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ song.title }} - Song Details</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      .song-details {
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .back-link {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: #4caf50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .back-link:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>{{ song.title }} by {{ song.artist }}</h1>
+    </header>
+    <div class="song-details">
+      <p><strong>Year:</strong> {{ song.year }}</p>
+      <a class="back-link" href="{{ url_for('index') }}">Back to List</a>
+    </div>
+  </body>
+</html>
