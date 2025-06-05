@@ -20,4 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),  # 👈 This line includes your app's URLs
+    path('', include('library.urls')),  # 👈 Point to the correct app
+
 ]
