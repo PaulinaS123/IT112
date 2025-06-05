@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="{% static 'django-app/styles.css' %}">
+</head>
+<body>
+    <h1>
+        {% if user_name %}
+            Hello, {{ user_name }}! 👋
+        {% else %}
+            Hello, visitor! 😊
+        {% endif %}
+    </h1>
+
+    <img src="{% static 'django-app/icedcoffee.jpg' %}" alt="Iced Coffee" width="300">
+</body>
+</html>
