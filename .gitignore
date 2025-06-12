@@ -15,4 +15,4 @@ db.sqlite3
 /staticfiles/
 .env
 .vscode/
-
+.DS_Store
