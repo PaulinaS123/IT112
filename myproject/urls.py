@@ -1,3 +1,4 @@
+
 """
 URL configuration for myproject project.
 
@@ -14,6 +15,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+
 from django.contrib import admin
 from django.urls import path, include
 
@@ -22,4 +25,9 @@ urlpatterns = [
     path('', include('main.urls')),  # 👈 This line includes your app's URLs
     path('', include('library.urls')),  # 👈 Point to the correct app
 
+
+    path('', include('main.urls')),          # Main app URLs at root "/"
+    # Library app URLs at "/library/"
+    path('library/', include('library.urls')),
+    path('api/', include('myitems.urls')),   # Myitems app URLs at "/api/"
 ]
